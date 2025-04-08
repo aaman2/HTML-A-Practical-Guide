@@ -1,0 +1,75 @@
+<!-- # HTML5 Semantic Layout with ARIA for Inclusive Design
+1. Create a simple webpage with the following sections:
+    • Header with a title and navigation menu.
+    • Main content with a section and an article.
+    • Sidebar using <aside> for related links.
+    • Footer with copyright information.
+2. Use the aria-label attribute to improve accessibility in your navigation menu.
+3. Create a blog post layout using semantic elements such as <article> <header> and <footer> -->
+
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <!-- Header with title and navigation -->
+    <header>
+      <h1>My Awesome Blog</h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Posts</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+      <section>
+        <!-- Blog post -->
+        <article>
+          <header>
+            <h2>The Beauty of Semantic HTML</h2>
+            <p>Posted on April 8, 2025 by Jane Doe</p>
+          </header>
+
+          <p>
+            Semantic HTML gives meaning to your web pages, making them more
+            accessible and easier to understand for both humans and machines.
+          </p>
+
+          <p>
+            By using tags like <code>&lt;article&gt;</code>,
+            <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, and
+            <code>&lt;aside&gt;</code>, you can structure your content in a
+            meaningful way.
+          </p>
+
+          <footer>
+            <p>Tags: HTML, Accessibility, Web Development</p>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <!-- Sidebar with related links -->
+    <aside>
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="#">Why Semantic HTML Matters</a></li>
+        <li><a href="#">Improving Accessibility with ARIA</a></li>
+        <li><a href="#">Writing Clean HTML Code</a></li>
+      </ul>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 My Awesome Blog. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

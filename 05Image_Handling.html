@@ -1,0 +1,45 @@
+<!-- 
+# Decorate and Navigate: Using Images as Links and Background
+
+1. Add an image to a webpage with the following:
+    • Set the width to 400 pixels.
+    • Add an appropriate alt text and title.
+2. Create a clickable image that links to an external website.
+3. Create a div with a background image, ensuring it covers the entire div and is centered. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images as Links</title>
+  </head>
+  <body>
+    <img
+      src="/Npc.jpg"
+      alt="Girl Hand Hold Card"
+      srcset=""
+      width="400px"
+      title="Card Pic"
+      usemap="PC"
+    />
+
+    <div
+      style="
+        background-image: url(ScanDesktop.jpg);
+        height: 400px;
+        width: 900px;
+        background-size: cover;
+      "
+    ></div>
+
+    <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">
+      <img
+        src="Metro.jpg"
+        alt="Clickable Image"
+        title="Click to visit Image Tag Property "
+        width="400"
+      />
+    </a>
+  </body>
+</html>
