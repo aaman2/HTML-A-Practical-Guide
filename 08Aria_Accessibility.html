@@ -1,0 +1,131 @@
+<!-- 
+
+# Semantic Webpage Structure with ARIA and Responsive Sections
+
+1. Create a simple webpage with the following sections:
+    • Header with a title and navigation menu.
+    • Main content with a section and an article.
+    • Sidebar using <aside> for related links.
+    • Footer with copyright information.
+2. Use the aria-label attribute to improve accessibility in your navigation menu.
+3. Create a blog post layout using semantic elements such as <article>, <header>, and <footer> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Webpage</title>
+
+    <style>
+    
+        header {
+          background-color: #333;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+        }
+    
+        nav ul {
+          list-style: none;
+          display: inline-flex;
+          justify-content: center;
+          gap: 30px;
+          margin-top: 10px;
+        }
+    
+          
+  
+        main {
+          display: flex;
+          padding: 20px;
+        }
+        aside {
+          flex: 1;
+          background-color: #e8e8e8;
+          padding: 15px;
+          border-left: 1px solid #ccc;
+        }
+       
+        section {
+          flex: 3;
+          padding-right: 20px;
+        }
+    
+       
+    
+        article {
+          background-color: white;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+        }
+    
+        article header {
+          border-bottom: 1px solid #ddd;
+          margin-bottom: 10px;
+        }
+    
+        article footer {
+          margin-top: 15px;
+          font-size: 0.9em;
+          color: gray;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #333;
+          color: white;
+        } 
+      </style>
+    
+  </head>
+  <body>
+    <header role="banner">
+     
+      <h1> This is Title </h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li>Home</li>
+          <li>Services</li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <section aria-labelledby="section-title">
+        <article>
+            <header>
+
+                <h1>This is Section</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+                    nesciunt facilis iste, animi deserunt sed architecto inventore ipsa
+                    eius necessitatibus recusandae ipsam id. Nesciunt ab fugit quasi
+                    saepe voluptates veniam.
+                </p>
+            </article>
+        </header>
+      </section>
+
+      <aside aria-label="Related Links">
+        <h3>Related Links</h3>
+        <ul>
+          <li>related_Link1</li>
+          <li>related_Link2</li>
+          <li>related_Link3</li>
+          <li>related_Link4</li>
+        </ul>
+      </aside>
+    </main>
+
+
+    <footer  role="contentinfo">
+        <p>Made With very Free Time  &copy;  All rights are open krlo copy</p>
+    </footer>
+  </body>
+  </html>
+

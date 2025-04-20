@@ -1,0 +1,100 @@
+<!-- 
+#  HTML Form: Inputs, Validation & Style
+
+1. Add a phone number field to the form that accepts only numbers.
+2. Include a textarea for additional comments.
+3. Add validation to ensure the password is at least 8 characters long using the pattern attribute.
+4. Style the form to center it on the page and add a background color. Styling part is optional but I Rrecommend to try it -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+      body {
+        background-color: #567b9c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      form {
+        background-color: #ffffff;
+        padding: 30px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        margin-bottom: 15px;
+        font-family: sans-serif;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: progress;
+      }
+      textarea {
+        resize: vertical;
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>
+        Please Write Your Phone Number:
+        <input
+          type="tel"
+          placeholder="e.g. 1234567890"
+          pattern="[0-9]{10}"
+          title="Please enter a valid phone number (10 digits)"
+          required
+        />
+      </p>
+
+      <input type="tel" name="" id="">
+      <p>
+        Please Add additional comments Here :
+        <textarea
+          name="additional_comments"
+          id="comments"
+          cols="30"
+          placeholder="Add additional comments Here"
+          style="background-color: aqua"
+        ></textarea>
+      </p>
+
+      <p>
+        Please Enter Your Password :
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          placeholder="Password"
+          pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Password must contain at least 1 uppercase and 1 lowercase letter, and be at least 8 characters long."
+        />
+      </p>
+
+      <p>
+        <input type="submit" value="submit" />
+      </p>
+    </form>
+  </body>
+</html>
